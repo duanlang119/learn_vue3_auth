@@ -40,7 +40,7 @@
 import { ref,reactive,onMounted,onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
-import { toast } from '~/composables/util'
+import { toast } from '@/composables/util'
 
 
 const store = useStore()

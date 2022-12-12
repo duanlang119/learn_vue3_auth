@@ -1,6 +1,6 @@
 import axios from "axios"
-import { toast } from '~/composables/util'
-import { getToken } from '~/composables/auth'
+import { toast } from '@/composables/util'
+import { getToken } from '@/composables/auth'
 
 const service = axios.create({
     baseURL:"/eduservice"

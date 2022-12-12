@@ -1,6 +1,6 @@
 import { ElNotification } from 'element-plus'
 
-// 成功提示
+// 鎴愬姛鎻愮ず
 export function toast(message,type='success',dangerouslyUseHTMLString=false){
     ElNotification({
         message,

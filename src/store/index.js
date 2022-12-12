@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
-import { login, getinfo} from '~/api/manager'
-import { setToken } from '~/composables/auth'
+import { login, getinfo} from '@/api/manager'
+import { setToken } from '@/composables/auth'
 
 // 创建一个新的 store 实例
 const store = createStore({

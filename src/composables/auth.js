@@ -3,18 +3,18 @@ import { useCookies } from '@vueuse/integrations/useCookies'
 const TokenKey = "admin-token"
 const cookie = useCookies()
 
-// 获取token
+// 鑾峰彇token
 export function getToken(){
     return cookie.get(TokenKey)
 }
 
-// 设置token
+// 璁剧疆token
 export function setToken(token){
     return cookie.set(TokenKey,token)
 }
 
 
-// 清除token
+// 娓呴櫎token
 export function removeToken(){
     return cookie.remove(TokenKey)
 }

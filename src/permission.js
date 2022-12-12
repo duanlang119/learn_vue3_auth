@@ -1,6 +1,6 @@
-import router  from '~/router'
-import {getToken}  from '~/composables/auth'
-import {toast}  from '~/composables/util'
+import router  from '@/router'
+import {getToken}  from '@/composables/auth'
+import {toast}  from '@/composables/util'
 import store from './store'
 
 // »´æ÷«∞÷√ ÿŒ¿
