@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
+import { viteMockServe } from 'vite-plugin-mock'
 
 
 // https://vitejs.dev/config/
@@ -15,7 +16,7 @@ export default defineConfig({
 
   server:{
     proxy:{
-      '/eduservice': 'http://localhost:8001' 
+      // '/eduservice': 'http://localhost:8001' 
       // '/eduservice': {
       //   target: 'http://localhost:8001',
       //   changeOrigin: true,
@@ -24,5 +25,5 @@ export default defineConfig({
     }
   },
 
-  plugins: [vue(),WindiCSS()]
+  plugins: [vue(),WindiCSS(),viteMockServe({mockPath:'./src/mock',watchFiles:true,supportTs:true})]
 })
