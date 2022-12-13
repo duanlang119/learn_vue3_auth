@@ -3,7 +3,7 @@ import { toast } from '@/composables/util'
 import { getToken } from '@/composables/auth'
 
 const service = axios.create({
-    baseURL:"/eduservice"
+    baseURL:"/api"
 })
 
 // Ìí¼ÓÇëÇóÀ¹½ØÆ÷

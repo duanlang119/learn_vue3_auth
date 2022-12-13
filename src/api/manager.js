@@ -1,7 +1,7 @@
 import axios from '@/axios'
 
 export function login(username,password){
-    return axios.post("/user/login",{
+    return axios.post("/login",{
         username,
         password
 
@@ -9,7 +9,7 @@ export function login(username,password){
 }
 
 export function getinfo(){
-    return axios.post("/user/info",{
+    return axios.post("/info",{
       
     })
 }

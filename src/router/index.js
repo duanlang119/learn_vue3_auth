@@ -7,14 +7,28 @@ import Index from '@/pages/index.vue'
 import Login from '@/pages/login.vue'
 import NotFound from '@/pages/404.vue'
 /* Layout */
-// import Layout from '@/views/layout/Layout'
+// import Layout from '@/views/layout/Layout.vue'
 // import List from '@/views/edu/teacher/list.vue'
 // import Save from '@/views/edu/teacher/save.vue'
 
-const routes = [{
+const routes = [
+    {
     path:"/",
     component:Index
-},{
+},
+// {
+//     path: '/',
+//     component: Layout,
+//     redirect: '/dashboard',
+//     name: 'Dashboard',
+//     hidden: true,
+//     children: [{
+//       path: 'dashboard',
+//       component: () => import('@/views/dashboard/index')
+//     }]
+//   },
+
+{
     path:"/login",
     component:Login
 },  
