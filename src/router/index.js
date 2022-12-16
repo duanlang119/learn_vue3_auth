@@ -64,7 +64,7 @@ const routes = [
     path: "/study",
     name: "Home",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/study/006/Home.vue"),
+      import(/* webpackChunkName: "about" */ "../views/study/008/Home.vue"),
   },
 { 
     path: '/:pathMatch(.*)*', 

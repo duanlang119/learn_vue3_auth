@@ -1,0 +1,44 @@
+## 08 组件-父传子
+4.9 组件 ： 父 传 子
+
+		1. 父
+
+			<template>
+				<div>
+					<List :msg='msg'></List>
+				</div>
+			</template>
+
+			<script setup>
+			import List from '../components/List.vue'
+			let msg = ref('这是父传过去的数据');
+			</script>
+
+		2. 子
+
+			<template>
+				<div> 
+					这是子组件 ==> {{ msg }}
+				</div>
+			</template>
+
+			<script setup>
+			defineProps({
+				msg:{
+					type:String,
+					default:'1111'
+				}
+			})
+			</script>
+            #如果是setup方法，就需要把props在setup中解构出来
+            <script type="text/javascript">
+            export default{
+	            props:['msg'],
+	                setup( props ){
+		        let obj = props.msg;
+		        return {
+			        obj
+		}
+	}
+}
+</script>
