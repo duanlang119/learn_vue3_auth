@@ -17,5 +17,14 @@ export const user = defineStore('user', {
   	upAge( val ){
   		this.age += val;
   	}
+  },
+  // 开启数据缓存
+  persist: {
+    enabled: true,
+    strategies: [{
+      key: 'test_user',
+      storage: localStorage,
+      //paths: ['age']
+    }]
   }
 })

@@ -1,22 +1,9 @@
-import { defineStore } from 'pinia'
+import { createPinia } from 'pinia'
+//引入pinia的持久化存储插件
+import piniaPluginPersist from 'pinia-plugin-persist'
 
-export const useStore = defineStore('storeId', {
-  state: () => {
-    return {
-      num: 0,
-      name: 'Eduardo',
-      changeNum:['a','b','c']
-    }
-  },
-  getters:{
-    counterPar(  ){
-        console.log(111);
-        return this.num + 100;
-    }
-},
-  actions:{
-    changeCounter( val ){
-        this.num += val;
-    }
-}
-})
+const pinia = createPinia()
+//使用插件
+pinia.use(piniaPluginPersist)
+
+export default pinia
