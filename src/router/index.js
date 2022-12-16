@@ -60,7 +60,12 @@ const routes = [
 //       }
 //     ]
 //   },
-
+{
+    path: "/study",
+    name: "Home",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/study/002/Home.vue"),
+  },
 { 
     path: '/:pathMatch(.*)*', 
     name: 'NotFound', 
