@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import { createPinia } from 'pinia'
 
 
 
@@ -13,7 +14,7 @@ const app = createApp(App)
 
 // 将 store 实例作为插件安装
 app.use(store)
-
+app.use(createPinia())
 app.use(router)
 
 app.use(ElementPlus)
