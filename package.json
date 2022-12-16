@@ -21,6 +21,7 @@
     "@vitejs/plugin-vue": "^2.3.4",
     "mockjs": "^1.1.0",
     "sass": "^1.56.2",
+    "unplugin-auto-import": "^0.12.1",
     "vite": "^2.9.7",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-windicss": "^1.8.4",

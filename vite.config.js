@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 import { viteMockServe } from 'vite-plugin-mock'
+import AutoImport from 'unplugin-auto-import/vite'
 
 
 // https://vitejs.dev/config/
@@ -25,5 +26,11 @@ export default defineConfig({
     }
   },
 
-  plugins: [vue(),WindiCSS(),viteMockServe({mockPath:'./src/mock',watchFiles:true,supportTs:true})]
+  plugins: [vue(),
+    WindiCSS(),
+    viteMockServe({mockPath:'./src/mock',watchFiles:true,supportTs:true}),
+    AutoImport({
+      imports:['vue','vue-router']//自动导入vue和vue-router相关函数
+    })
+  ]
 })
