@@ -17,14 +17,18 @@ const store = createStore({
     },
     actions:{
       // 获取当前登录用户信息
-      login({ commit }, { username,password }){
-        return new Promise((resolve,reject)=>{
-            login(username,password).then(res=>{
-                setToken(res.token)
+      async login( { username,password }){
+        const res = await login(username,password)
+        setToken(res.token)
+        return Promise.resolve(undefined)
 
-                resolve(res)
-            }).catch(err=>reject(err))
-        })
+        // return new Promise((resolve,reject)=>{
+        //     login(username,password).then(res=>{
+        //         setToken(res.token)
+
+        //         resolve(res)
+        //     }).catch(err=>reject(err))
+        // })
     },
       // 获取当前登录用户信息
       getinfo({ commit}){
