@@ -6,6 +6,7 @@ import {
 import Index from '@/pages/index.vue'
 import Login from '@/pages/login.vue'
 import NotFound from '@/pages/404.vue'
+import Home from '../views/saas/Home.vue'
 /* Layout */
 // import Layout from '@/views/layout/Layout.vue'
 // import List from '@/views/edu/teacher/list.vue'
@@ -65,6 +66,17 @@ const routes = [
     name: "Home",
     component: () =>
       import(/* webpackChunkName: "study" */ "../views/study/021/Home.vue"),
+  },
+  {
+    path: "/saas",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/saas/about",
+    name: "About",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/saas/About.vue"),
   },
 { 
     path: '/:pathMatch(.*)*', 
